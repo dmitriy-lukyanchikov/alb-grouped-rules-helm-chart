@@ -1,0 +1,5 @@
+{{- range $name, $ingress := .Values.ingresses }}
+---
+{{- include "springboot-template.ingress" (dict "context" $ "ingress" $ingress) }}
+{{- end }}
+
